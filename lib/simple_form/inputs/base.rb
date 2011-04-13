@@ -74,7 +74,7 @@ module SimpleForm
 
       # Whether this input is valid for HTML 5 required attribute.
       def has_required?
-        attribute_required? && SimpleForm.use_html5
+        attribute_required? && SimpleForm.use_html5 && !SimpleForm.disable_browser_validations
       end
 
       def has_autofocus?
